@@ -4,7 +4,7 @@
 (github: https://github.com/trungtruc123/flutter_skin )
 # 2. Giới thiệu đề tài
 Bệnh ngoài da là loại bệnh rất phổ biến ở bất kỳ lứa tuổi nào. Tuy bệnh không nguy hiểm đến tính mạng nhưng ảnh hưởng trực tiếp đến bề mặt da gây mất thẩm mỹ, ảnh hưởng đến tâm lý của người bệnh gây mất tự tin trong giao tiếp và khó khăn trong việc sinh hoạt hằng ngày.
-<img src ='/display/disease_skin.jpg'>
+<img src ='/display/desease_skin.jpg'>
 Ứng dụng chỉ cần bạn chụp 1 bức ảnh về vùng da có dấu hiệu bất thường, ứng dụng sẽ chuẩn đoán bệnh với độ chính xác khoảng 80% và đưa ra các lời khuyên , các điều trị hợp lí nhất.
 
 * Hiện tại mới nhận diện được 7 bệnh về da : nv, mel, bkl, bcc, akiec, df, vasc

@@ -9,17 +9,19 @@ from keras.models import model_from_json
 import keras
 from keras import backend as K
 
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
 app = Flask(__name__)
 
 SKIN_CLASSES = {
-  0: 'Actinic Keratoses (Solar Keratoses) or intraepithelial Carcinoma (Bowen’s disease)',
-  1: 'Basal Cell Carcinoma',
-  2: 'Benign Keratosis',
-  3: 'Dermatofibroma',
-  4: 'Melanoma',
+  0: 'Actinic Keratoses (Solar Keratoses) or intraepithelial Carcinoma (Bowen’s disease)', #Viêm giác mạc
+  1: 'Basal Cell Carcinoma', # Ung thư gia
+  2: 'Benign Keratosis',  #Viêm giac mạc bã nhờn
+  3: 'Dermatofibroma', # Viêm gia cơ địa
+  4: 'Melanoma',      # Khối u ác tính
   5: 'Melanocytic Nevi',
-  6: 'Vascular skin lesion'
-
+  6: 'Vascular skin lesion' # Tổn thương mạch máu ở da
 }
 
 @app.route('/')
@@ -32,6 +34,7 @@ def upload_file():
         f = request.files['file']
         path='static/data/'+f.filename
         f.save(path)
+        print('f',f)
         j_file = open('modelnew.json', 'r')
         loaded_json_model = j_file.read()
         j_file.close()
